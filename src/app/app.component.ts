@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  appStatus = new Promise((resolve) =>
+    setTimeout(() => resolve('stable'), 1000)
+  );
   servers = [
     {
       instanceType: 'medium',
